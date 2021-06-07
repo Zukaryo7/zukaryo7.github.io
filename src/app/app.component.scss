@@ -20,11 +20,23 @@
         text-align: center;
     }
 
+    .form-check {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        user-select: none;
+
+        .form-check-label {
+            margin-left: 5px;
+        }
+
+    }
+
     .kana {
         text-decoration: none;
         color: #f0f0f0;
         cursor: pointer;
-        margin: -10px 50px 50px 50px;
+        margin: -5px 40px 40px 40px;
         font-size: 100px;
         font-weight: bold;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -32,7 +44,7 @@
     }
 
     .kanaType {
-        margin: 50px 0px 0px 0px;
+        margin: 40px 0px 0px 0px;
         font-weight: bold;
         font-size: 35px;
     }
@@ -53,18 +65,16 @@
         }
     }
 
+    .buttons {
+        margin-top: 40px;
+    }
+
     .reinitialize {
         border-color: #f0f0f0;
         &:hover {
             border-color: #f0f0f0;
         }
     }
-
-    .reinitializationMessage {
-        font-size: 20px;
-    }
-
-
 
     .footer {
         margin-top: 25px;
