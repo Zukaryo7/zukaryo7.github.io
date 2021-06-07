@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { toKana, toHiragana, toKatakana, toRomaji } from 'wanakana';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'kanas';
   kana = "";
   kanaType = "";
   hiragana = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so", "ta", "chi", "tsu", "te", "to",
@@ -18,6 +18,7 @@ export class AppComponent {
               "ru", "re", "ro", "wa", "wo", "n"];
   reinitializationMessage = "";
   counter = 0;
+  romaji = true;
 
   constructor() {
     this.generateKana();
@@ -58,7 +59,6 @@ export class AppComponent {
     }
   }
 
-
   reinitialize() {
     this.counter++;
     this.hiragana = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", "shi", "su", "se", "so", "ta", "chi", "tsu", "te", "to",
@@ -70,6 +70,19 @@ export class AppComponent {
     this.reinitializationMessage = "Liste réinitialisée ! (" + this.counter + ")";
     this.kana = "";
     this.generateKana();
+  }
+
+  swap(kanaType: string) {
+    if(!this.romaji) {
+      this.kana = toRomaji(this.kana);
+      this.romaji = true;
+    } else if(kanaType == "Hiragana") {
+      this.kana = toHiragana(this.kana);
+      this.romaji = false;
+    } else {
+      this.kana = toKatakana(this.kana);
+      this.romaji = false;
+    }
   }
 
 }
