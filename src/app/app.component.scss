@@ -1,0 +1,72 @@
+.main {
+
+    background-color: #2b2a33;
+    border-radius: 30px;
+
+    margin: 25px;
+    font-family: 'Roboto';
+
+    h1 {
+        margin: 15px;
+        font-weight: 300;
+        letter-spacing: 5px;
+    }
+
+    p {
+        text-align: center;
+
+    }
+
+    .kana {
+        margin: 0px 50px 50px 50px;
+        font-size: 100px;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+
+    .kanaType {
+        margin: 50px 0px 0px 0px;
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    button {
+        margin: 15px;
+        color: #f0f0f0;
+    }
+
+    .btn-dark {
+        background-color: #1c1b22;
+        border-color: #f0f0f0;
+    }
+
+    .btn-outline-dark {
+        &:hover {
+            background-color: #1c1b22;
+        }
+    }
+
+    .reinitialize {
+        border-color: #f0f0f0;
+
+        &:hover {
+            border-color: #f0f0f0;
+        }
+    }
+
+    .reinitializationMessage {
+        font-size: 20px;
+    }
+
+    .footer {
+        text-decoration: none;
+        color: #f0f0f0;
+        margin: 15px;
+        padding: 10px;
+
+        &:hover {
+            color: #a199b3;
+        }
+    }
+
+}
