@@ -1,0 +1,170 @@
+h1 {
+  margin: 15px;
+  font-weight: 200;
+  letter-spacing: 8px;
+}
+
+.kanaKanji {
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.description {
+  margin: 15px;
+  font-weight: 300;
+  text-align: center;
+  width: 70%;
+}
+
+.checkboxes {
+    width: 50%;
+}
+
+.form-check {
+  display: flex;
+  align-items: inherit;
+  margin: 10px 0px 10px;
+  user-select: none;
+  .form-check-label {
+    margin-left: 5px;
+  }
+}
+
+.kana {
+  text-decoration: none;
+  color: var(--font-color);
+  cursor: pointer;
+  margin: -15px 25px 25px 25px;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  user-select: none;
+  &:hover {
+      color: var(--color-accent);
+  }
+}
+
+.kanaType {
+  margin: 25px 0px 0px 0px;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.bg-info {
+    background-color: var(--color-accent) !important;
+}
+
+button {
+  margin: 15px;
+  color: var(--font-color) !important;
+  &:hover {
+    color: var(--font-color) !important;
+  }
+}
+
+.btn-dark {
+  background-color: var(--color-primary);
+  border-color: var(--font-color);
+}
+
+.btn-outline-dark {
+  &:hover {
+    background-color: var(--color-primary);
+  }
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+.reinitialize {
+  border-color: var(--font-color);
+
+  &:hover {
+    border-color: var(--font-color);
+  }
+}
+
+@media (max-width: 1100px) {
+
+    .description {
+        text-align: justify;
+    }
+
+    .checkboxes {
+        width: 75%;
+    }
+
+    .title {
+        width: 75%;
+    }
+
+    .description {
+        width: 75%;
+    }
+}
+
+@media (max-width: 875px) {
+
+    .kanaKanji {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+    }
+
+    .time {
+        margin-bottom: 20px;
+    }
+
+    .description {
+        margin-bottom: 20px;
+    }
+
+    .checkboxes {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .kanaType {
+        margin-top: 20px;
+    }
+
+    .kana {
+        margin-bottom: 40px;
+    }
+
+    .progress {
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    
+    .description {
+        text-align: justify;
+    }
+
+  .progress {
+    width: 75% !important;
+    height: 20px;
+  }
+
+  .buttons {
+      width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      width: 100%;
+    }
+
+  }
+}

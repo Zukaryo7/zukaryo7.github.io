@@ -1,0 +1,52 @@
+.title {
+    color: var(--font-color);
+    margin: 15px auto 15px auto;
+    font-weight: 200;
+    letter-spacing: 8px;
+    text-align: left;
+    width: 75%;
+}
+
+.updates {
+    width: 75%;
+    margin: 25px auto 25px auto;
+}
+
+.logTitle {
+    margin-bottom: 15px;
+}
+
+.list-group {
+    background-color: var(--color-secondary);
+}
+
+.list-group-item {
+    padding: 25px;
+    background-color: var(--color-secondary);
+    color: var(--font-color);
+    border-color: rgb(104, 104, 104);
+    small {
+        color: var(--font-color) !important;
+        opacity: 0.6;
+        margin-bottom: 8px;
+    }
+    &:hover {
+        background-color: #00000007;
+        .logTitle h5 {
+            color: var(--color-accent);
+        }
+    }
+}
+
+@media (max-width: 700px) {
+
+    .title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .updates {
+        width: 100%;
+    }
+    
+}

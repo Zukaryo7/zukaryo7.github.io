@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { LogsComponent } from './logs/logs.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { KanaGenComponent } from './kana-gen/kana-gen.component';
 
 @NgModule({
   declarations: [	
     AppComponent, 
-    LogsComponent,
+    LogsComponent, 
+    KanaGenComponent,
 
    ],
   imports: [

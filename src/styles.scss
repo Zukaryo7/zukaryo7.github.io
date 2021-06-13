@@ -1,63 +1,29 @@
 .theme-light {
     --color-primary: #f1f1f1;
     --color-secondary: white;
-    --font-color: black;
+    --font-color: rgb(58, 57, 57);
     --color-accent: #0d6efd;
+    --bg-motif: #00000012;
 }
 
 .theme-dark {
     --color-primary: #1c1b22;
     --color-secondary: #272631;
-    --font-color: #f1f1f1;
+    --font-color: #e7e7e7;
     --color-accent: #06e2ff;
+    --bg-motif: #FFFFFF09;
 }
 
 html, body {
-    margin: 0;
+    margin: 0px 10px 0px 10px !important;
     user-select: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 body {
     background-color: var(--color-primary);
     color: var(--font-color);
-}
-
-.navigation {
-    margin-top: 15px;
-}
-
-.toggle {
-    display: flex;
-    justify-content: center;
-}
-
-.checkbox {
-    visibility: collapse;
-}
-
-.label {
-	background-color: var(--font-color);
-	border-radius: 50px;
-	cursor: pointer;
-	
-	position: relative;
-	height: 20px;
-	width: 40px;
-
-}
-
-.label .ball {
-	background-color: var(--color-primary);
-	border-radius: 50%;
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	height: 16px;
-	width: 16px;
-	transform: translateX(0px);
-	transition: transform 0.2s linear;
-}
-
-.checkbox:checked + .label .ball {
-	transform: translateX(20px);
+    margin: 15px;
+    background-image: radial-gradient(circle at center center, var(--bg-motif) 0%, var(--bg-motif) 7%,transparent 7%, transparent 100%),linear-gradient(90deg, var(--color-primary),var(--color-primary)); background-size: 16px 16px;
 }

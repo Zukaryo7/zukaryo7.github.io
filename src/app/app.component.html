@@ -1,39 +1,41 @@
-<div class="main d-flex flex-column align-items-center justify-content-center">
-  <h1 class="kanaKanji">仮名</h1>
-  <h1>RANDOM "KANA" GENERATOR</h1>
-  <div>Temps : <b [chronometer]="chronometer"></b></div>
-  <p class="description">Génère des "Hiragana" ou "Katakana" dans un ordre aléatoire. Chaque Kana n'apparaîtra qu'une seule fois jusqu'à réinitialisation de la liste.<br/>Cette application permet de s'entraîner à écrire des "Kana" en procédant dans le désordre et ainsi éviter le par cœur traditionnel (a, i, u, e, o, ka, ki, ...).<br/>Cliquez sur le "Rōmaji" pour afficher la solution !</p>
-  <div class="checkboxes d-flex w-50 justify-content-around">
-    <div class="form-check">
-      <input [checked]="isHiraganaChecked" (change)="updateHiragana()" class="form-check-input" type="checkbox" [disabled]="hiraganaDisabled">
-      <label class="form-check-label" for="hiragana">Hiragana</label>
-    </div>
-    <div class="form-check">
-      <input [checked]="isKatakanaChecked" (change)="updateKatakana()" class="form-check-input" type="checkbox" [disabled]="katakanaDisabled">
-      <label class="form-check-label" for="katakana">Katakana</label>
-    </div>
-    <div class="form-check">
-      <input [checked]="isDiacriticChecked" (change)="updateDiacritics()" class="form-check-input" type="checkbox" [disabled]="diactricDisabled">
-      <label class="form-check-label" for="diacritiques">Diacritiques</label>
-    </div>
-    <div class="form-check">
-      <input [checked]="isDigraphChecked" (change)="updateDigraphs()" class="form-check-input" type="checkbox" [disabled]="digraphDisabled">
-      <label class="form-check-label" for="digraphes">Digraphes</label>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="logo d-flex align-items-center" routerLink="">ZUKAGEN<div class="logoDot m-lg-2"></div></a>
+    <button id="smallNav" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" routerLink="/kana-gen" routerLinkActive="activeNavItem">Générateur Kana</a></li>
+        <li class="nav-item"><a class="nav-link" >Lecture</a></li>
+        <li class="nav-item"><a class="nav-link" >Kanjis</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/logs" routerLinkActive="activeNavItem">Logs</a></li>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fr</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item">En</a></li>
+          </ul>
+        </li>
+        <li class="nav-item toggle-item">
+          <div class="toggle nav-link">
+            <input type="checkbox" class="checkbox" id="switch"/>
+            <label class="label" for="switch">
+              <div class="ball"></div>
+            </label>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-  <p class="kanaType">{{kanaType}}</p>
-  <a (click)="swap(kanaType)" class="kana">{{kana}}</a>
-  <div class="progress w-50">
-    <div [style.width.%]="progression" class="progress-bar bg-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</nav>
+
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
+
+<div class="footer d-flex flex-column align-items-center h-100">
+  <div class="d-flex justify-content-center">
+    <a href="https://twitter.com/Zukaryo7" target="_blank" rel="noopener noreferrer" class="footerLink">App créée par
+      @zukaryo</a>
   </div>
-  <div class="buttons">
-    <button (click)="generateKana()" type="button" class="btn btn-dark btn-lg">Générer</button>
-    <button (click)="reinitialize()" type="button" class="reinitialize btn btn-outline-dark btn-lg">Réinitialiser liste</button>
-  </div>
-  <div class="footer d-flex flex-column">
-    <div class="d-flex justify-content-center">
-      <a href="https://twitter.com/Zukaryo7" target="_blank" rel="noopener noreferrer" class="footerLink">App créée par @zukaryo</a>
-    </div>
-    <p>Tous droits réservés © 2021</p>
-  </div>
+  <p>Tous droits réservés © 2021</p>
 </div>

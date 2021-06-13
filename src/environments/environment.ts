@@ -14,3 +14,4 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+// ng build --output-path docs --base-href /your_project_name/

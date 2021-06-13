@@ -1,141 +1,132 @@
-
 .main {
-
     background-color: var(--color-secondary);
-    border-radius: 30px;
-    margin: 15px;
-    margin-left: 50px;
-    margin-right: 50px;
+    border-radius: 10px;
+	width: 95%;
+	margin: auto;
     padding: 20px;
     text-align: center;
+}
 
-    h1 {
-        margin: 15px;
-        font-weight: 300;
-        letter-spacing: 5px;
-    }
+.navbar {
+	width: 95%;
+	margin: auto;
+	.container-fluid {
+		padding: 0;
+		.nav-item a {
+			color: var(--font-color);
+		}
+	}
+}
 
-    .kanaKanji {
-        margin-bottom: 0px;
-    }
+.navbar-brand:hover {
+	color: vbar(--font-color) !important;
+}
 
-    .description {
-        margin: 15px;
-    }
+.activeNavItem {
+	color: var(--color-accent) !important;
+}
 
-    p {
-        text-align: center;
-    }
+.nav-item {
+	margin: 0px 10px 0px 10px;
+	a {
+		&:hover {
+		color: var(--color-accent) !important;
+		}
+ 	}
+}
 
-    .form-check {
-        display: flex;
-        align-items: center;
-        margin: 10px;
-        user-select: none;
-        .form-check-label {
-            margin-left: 5px;
-        }
-    }
+.dropdown-item:hover {
+	background-color: var(--color-primary);
+}
 
-    .kana {
-        text-decoration: none;
-        color: var(--font-color);
-        cursor: pointer;
-        margin: -5px 40px 40px 40px;
-        font-size: 100px;
-        font-weight: bold;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        user-select: none;
-    }
+.logo {
 
-    .kanaType {
-        margin: 40px 0px 0px 0px;
-        font-weight: bold;
-        font-size: 35px;
-    }
+	text-decoration: none;
+	color: var(--font-color);
+	font-family: 'Chewy', cursive;
+	font-weight: 300;
+	font-size: 32px;
+	.logoDot {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		background-color: var(--color-accent);
+	}
+}
 
-    button {
-        margin: 15px;
-        color: var(--font-color);
-    }
+.dropdown-menu {
+	background-color: var(--color-primary);
+}
 
-    .btn-dark {
-        background-color: var(--color-primary);
-        border-color: var(--font-color);
-    }
+.darkSmallNav {
+	filter: invert(100%);
+}
 
-    .btn-outline-dark {
-        &:hover {
-            background-color: var(--color-primary);
-        }
-    }
+.toggle-item {
+	align-self: baseline;
+}
 
-    .buttons {
-        margin-top: 40px;
-    }
+.toggle {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 3px;
+	margin-left: -5px;
+	padding-right: 0px !important;
+}
 
-    .reinitialize {
-        border-color: var(--font-color);
-        &:hover {
-            border-color: var(--font-color);
-        }
-    }
+.checkbox {
+	width: 0px;
+    visibility: collapse;
+}
 
-    .footer {
-        margin-top: 25px;
-        font-weight: 300;
-
-        a, p{
-            padding: 0px;
-            text-decoration: none;
-            color: var(--font-color);
-            margin-left: 15px;
-            margin-right: 15px;
-            margin-bottom: 0px;
-        }
-        p {
-            margin-bottom: 10px;
-        }
-    }
-
-    a {
-        &:hover {
-            color: var(--color-accent) !important;
-        }
-    }
-
-    .footer a:hover {
-        font-weight: normal;
-    }
+.label {
+	background-color: var(--font-color);
+	border-radius: 50px;
+	cursor: pointer;
+	
+	position: relative;
+	height: 20px;
+	width: 40px;
 
 }
 
-@media (max-width: 576px) {
-
-    .main {
-        margin: 20px;
-    }
-    
-    .checkboxes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .progress {
-        width: 75% !important;
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        button {
-            width: 95%;
-        }
-
-    }
+.label .ball {
+	background-color: var(--color-primary);
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 16px;
+	width: 16px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
 }
+
+.checkbox:checked + .label .ball {
+	transform: translateX(20px);
+}
+
+  .footer {
+	margin-top: 25px;
+	margin-bottom: 10px;
+	font-weight: 300;
+  
+	a,
+	p {
+	  padding: 0px;
+	  text-decoration: none;
+	  color: var(--font-color);
+	  margin-left: 15px;
+	  margin-right: 15px;
+	  margin-bottom: 0px;
+	}
+  
+	p {
+	  margin-bottom: 10px;
+	}
+  }
+  
+  .footer a:hover {
+	color: var(--color-accent);
+  }
+
