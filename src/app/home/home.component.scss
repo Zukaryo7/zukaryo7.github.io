@@ -12,7 +12,7 @@
                 font-size: 25px;
                 color: var(--font-color);
                 text-align: left;
-                animation: rightTranslation 1s linear, nihongoFadein 1s ease-in;
+                animation: rightTranslation 0.7s linear, nihongoFadein 1s ease-in;
                 animation-fill-mode: forwards;
                 margin-bottom: 4%;
             }
@@ -20,7 +20,7 @@
                 font-size: 40px;
                 font-weight: bolder;
                 text-align: left;
-                animation: rightTranslation 1s linear, fadein 1s ease-in;
+                animation: rightTranslation 0.7s linear, fadein 1s ease-in;
                 animation-fill-mode: forwards;  
                 line-height: 120%;
                 .evidence {
@@ -30,7 +30,7 @@
             }
             button {
                 width: fit-content;
-                animation: leftTranslation 1s linear, fadein 1s ease-in;
+                animation: leftTranslation 0.7s linear, fadein 1s ease-in;
                 animation-fill-mode: forwards;  
                 background-color: var(--color-accent);
                 border: var(--color-accent);
@@ -43,12 +43,12 @@
         }   
         .mainIllu {
             width: 45%;
-            animation: topTranslation 1s linear, fadein 1.2s ease-in;
+            animation: topTranslation 0.7s linear, fadein 1s ease-in;
         }
     }
 
     .main-cards {
-        animation: rightTranslation 1s linear, fadein 1.2s ease-in;
+        animation: rightTranslation 0.7s linear, fadein 1s ease-in;
         margin: 100px 0 100px;
         .main-card {
             padding: 20px;
@@ -78,12 +78,9 @@
 
 @keyframes rightTranslation {
     0% {
-        filter: blur(3px);
         transform: translateX(-7%);
     }
     100% {
-        filter: blur(0);
-        transition: 1s ease-in;
         transform: translateX(0);
     }
 }
@@ -101,22 +98,17 @@
 @keyframes topTranslation {
     0% {
         transform: translateY(8%);
-        filter: blur(3px)
     }
     100% {
         transform: translateY(0);
-        filter: blur(0)
     }
 }
 
 @keyframes leftTranslation {
     0% {
-        filter: blur(3px);
         transform: translateX(50%);
     }
     100% {
-        filter: blur(0);
-        transition: 1s ease-in;
         transform: translateX(0);
     }
 }
