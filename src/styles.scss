@@ -1,29 +1,35 @@
 .theme-light {
-    --color-primary: #f1f1f1;
+    --color-primary: #f7f7f7;
     --color-secondary: white;
     --font-color: rgb(58, 57, 57);
     --color-accent: #0d6efd;
+    --color-accent-inverted: invert(55%) sepia(100%) saturate(5795%) hue-rotate(207deg) brightness(98%) contrast(104%);
+    --color-accent-hover: #095cd8;
     --bg-motif: #00000012;
+    height: 100%;
+    background: linear-gradient(to top,  #f1f1f1,  #f1f1f1);
 }
 
 .theme-dark {
     --color-primary: #1c1b22;
     --color-secondary: #272631;
     --font-color: #e7e7e7;
-    --color-accent: #06e2ff;
+    --color-accent: rgb(255, 198, 138);
+    --color-accent-inverted: invert(78%) sepia(19%) saturate(819%) hue-rotate(344deg) brightness(101%) contrast(101%);
+    --color-accent-hover: rgb(223, 164, 101);
     --bg-motif: #FFFFFF09;
+    height: 100%;
+    background: linear-gradient(to top, var(--color-primary), var(--color-primary));
+
 }
 
 html, body {
-    margin: 0px 10px 0px 10px !important;
     user-select: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-}
-
-body {
-    background-color: var(--color-primary);
-    color: var(--font-color);
-    margin: 15px;
-    background-image: radial-gradient(circle at center center, var(--bg-motif) 0%, var(--bg-motif) 7%,transparent 7%, transparent 100%),linear-gradient(90deg, var(--color-primary),var(--color-primary)); background-size: 16px 16px;
+    background-color: #ffffff00 !important;
+    p, h1, h2, label, div {
+        color: var(--font-color);
+    }
+    margin: 0 10px 0 10px;
 }

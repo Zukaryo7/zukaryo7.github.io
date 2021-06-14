@@ -1,6 +1,5 @@
 .title {
-    color: var(--font-color);
-    margin: 15px auto 15px auto;
+    color: var(--color-accent);    margin: 15px auto 15px auto;
     font-weight: 200;
     letter-spacing: 8px;
     text-align: left;
@@ -31,7 +30,7 @@
         margin-bottom: 8px;
     }
     &:hover {
-        background-color: #00000007;
+        background-color: #00000010;
         .logTitle h5 {
             color: var(--color-accent);
         }

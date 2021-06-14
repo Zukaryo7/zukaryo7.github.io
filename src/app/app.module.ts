@@ -6,12 +6,16 @@ import { LogsComponent } from './logs/logs.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { KanaGenComponent } from './kana-gen/kana-gen.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [	
     AppComponent, 
     LogsComponent, 
-    KanaGenComponent,
+    KanaGenComponent, 
+    HomeComponent, 
+    NotFoundComponent,
 
    ],
   imports: [

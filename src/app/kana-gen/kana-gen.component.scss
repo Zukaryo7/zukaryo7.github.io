@@ -4,6 +4,10 @@ h1 {
   letter-spacing: 8px;
 }
 
+.title {
+  color: var(--color-accent);
+}
+
 .kanaKanji {
   margin-bottom: 0px;
   font-weight: bold;
@@ -83,6 +87,10 @@ button {
   &:hover {
     border-color: var(--font-color);
   }
+}
+
+.progress {
+  background-color: var(--color-primary);
 }
 
 @media (max-width: 1100px) {

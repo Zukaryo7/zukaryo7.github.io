@@ -1,0 +1,183 @@
+.all {
+    width: 80%;
+    margin: auto;
+    .wrapper {
+        margin: 50px 0 50px 0;
+        .left-panel {
+            z-index: 1;
+            margin-right: 8%;
+            .nihongo {
+                letter-spacing: 25px;
+                font-weight: bold;
+                font-size: 25px;
+                color: var(--font-color);
+                text-align: left;
+                animation: rightTranslation 1s linear, nihongoFadein 1s ease-in;
+                animation-fill-mode: forwards;
+                margin-bottom: 4%;
+            }
+            .headline {
+                font-size: 40px;
+                font-weight: bolder;
+                text-align: left;
+                animation: rightTranslation 1s linear, fadein 1s ease-in;
+                animation-fill-mode: forwards;  
+                line-height: 120%;
+                .evidence {
+                    color: var(--color-accent);
+                }
+                margin-bottom: 8%;
+            }
+            button {
+                width: fit-content;
+                animation: leftTranslation 1s linear, fadein 1s ease-in;
+                animation-fill-mode: forwards;  
+                background-color: var(--color-accent);
+                border: var(--color-accent);
+                color: var(--color-primary);
+                &:hover {
+                    background-color: var(--color-accent-hover);
+                    border: var(--color-accent-hover);
+                }
+            }   
+        }   
+        .mainIllu {
+            width: 45%;
+            animation: topTranslation 1s linear, fadein 1.2s ease-in;
+        }
+    }
+
+    .main-cards {
+        animation: rightTranslation 1s linear, fadein 1.2s ease-in;
+        margin: 100px 0 100px;
+        .main-card {
+            padding: 20px;
+            background-color: var(--color-primary);
+            border-radius: 10px;
+            width: 30%;
+            &:hover {
+                transform: scale(1.05);
+                transition: 0.2s ease-in;
+                cursor: pointer;
+            }
+            img {
+                width: 60px;
+                filter: var(--color-accent-inverted);
+            }
+            img, h3, p {
+                margin: 10px 20px 10px 20px;
+            }
+            p {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+
+
+@keyframes rightTranslation {
+    0% {
+        filter: blur(3px);
+        transform: translateX(-7%);
+    }
+    100% {
+        filter: blur(0);
+        transition: 1s ease-in;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes nihongoFadein {
+    from { opacity: 0; }
+    to   { opacity: 0.4; }
+}
+
+@keyframes topTranslation {
+    0% {
+        transform: translateY(8%);
+        filter: blur(3px)
+    }
+    100% {
+        transform: translateY(0);
+        filter: blur(0)
+    }
+}
+
+@keyframes leftTranslation {
+    0% {
+        filter: blur(3px);
+        transform: translateX(50%);
+    }
+    100% {
+        filter: blur(0);
+        transition: 1s ease-in;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1600px) {
+    .left-panel {
+        margin-right: 2%;
+    }
+    .mainIllu {
+        width: 55% !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        flex-direction: column;
+        margin-bottom: 0px !important;
+    }
+    .left-panel {
+        margin-right: 0 !important;
+        align-self: flex-start;
+    }
+    .mainIllu {
+        margin-top: 30px !important;
+        margin-bottom: 0px !important;
+        width: 80% !important;
+    }
+    .main-cards {
+        margin: 50px auto 30px auto !important;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .mainIllu {
+        display: none;
+    }
+    .main-cards {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px !important;
+    }
+    .main-card {
+        width: 100% !important;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        margin: auto !important;
+    }
+    .left-panel {
+        align-items: center;
+        margin: auto;
+        p {
+            text-align: center !important;
+        }
+    }
+    .all {
+        width: 95%;
+    }
+}

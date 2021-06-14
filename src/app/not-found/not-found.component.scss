@@ -1,0 +1,29 @@
+h1 {
+    font-weight: bolder;
+    font-size: 45px;
+    color: var(--color-accent);
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.illu {
+    margin-top: -40px;
+    width: 35%;
+}
+
+@media (max-width: 1500px) {
+    .illu {
+        margin-top: 0px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 730px) {
+    .illu {
+        margin-top: 0px;
+        width: 70%;
+    }
+}
