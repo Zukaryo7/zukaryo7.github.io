@@ -1,3 +1,4 @@
+import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { KanaGenComponent } from './kana-gen/kana-gen.component';
 import { LogsComponent } from './logs/logs.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'kana-gen', component: KanaGenComponent },
   { path: 'logs', component: LogsComponent },
+  { path: 'about', component: AboutComponent},
 
   {path: '404', component: NotFoundComponent},
   {path: '**', redirectTo: '/404'}

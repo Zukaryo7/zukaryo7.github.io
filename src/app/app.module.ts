@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { KanaGenComponent } from './kana-gen/kana-gen.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [	
@@ -15,7 +16,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     LogsComponent, 
     KanaGenComponent, 
     HomeComponent, 
-    NotFoundComponent,
+    NotFoundComponent, 
+    AboutComponent,
 
    ],
   imports: [
