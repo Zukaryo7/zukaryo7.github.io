@@ -35,8 +35,9 @@ export class AppComponent {
   }
 
   getLanguage():string{
-    if (localStorage) return localStorage['language'] || "";
-    else return "fr";
+    let value = localStorage['language'];
+    if(value === null || value === "" || value === undefined) return "fr";
+    else return value;
   }
 
   setLanguage(language: string){
