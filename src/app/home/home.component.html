@@ -1,10 +1,10 @@
 <div class="all">
 
     <div class="wrapper d-flex justify-content-between align-items-center">
-        <div class="left-panel d-flex flex-column justify-content-center">
+        <div class="left-panel d-flex flex-column justify-content-between">
             <p class="nihongo">日本語</p>
-            <p class="headline">Une solution <span class="evidence">simple</span><br/>pour apprendre le Japonais.</p>
-            <button type="button" class="btn btn-lg btn-primary" routerLink="/kana-gen">Découvrir</button>
+            <p class="headline" [innerHTML]="'home.title' | translate"></p>
+            <button type="button" class="btn btn-lg btn-primary" routerLink="/kana-gen">{{ 'home.discover' | translate }}<i class="fas fa-search"></i></button>
         </div>
         <img class="mainIllu" src="../../assets/img/composition.svg" />    
     </div>
@@ -12,18 +12,18 @@
     <div class="main-cards d-flex justify-content-between">
         <div routerLink="/kana-gen" class="main-card d-flex flex-column align-items-center">
             <img src="../../assets/img/settings-outline.svg" class="card-img-top" alt="...">
-            <h3>Générateur</h3>
-            <p>Module générant de manière aléatoire les 46 signes Japonais de base. Pour chaque "Romaji", l'objectif est d'écrire sa version Katakana/Hiragana.</p>
+            <h3>{{ 'nav.generator' | translate }}</h3>
+            <p>{{'home.genDescription' | translate}}</p>
         </div>
         <div class="main-card d-flex flex-column align-items-center">
             <img src="../../assets/img/language-outline.svg" class="card-img-top" alt="...">
-            <h3>Lecture</h3>
-            <p>Module présentant des mots Japonais générés aléatoirement qu'il faudra réécrire en "Romaji". Bientôt disponible...</p>
+            <h3>{{ 'nav.read' | translate }}</h3>
+            <p>{{'home.readDescription' | translate}}</p>
         </div>
         <div class="main-card d-flex flex-column align-items-center">
             <img src="../../assets/img/library-outline.svg" class="card-img-top" alt="...">
             <h3>Kanjis</h3>
-            <p>Module présentant des "Kanjis" et leur signification ainsi que des Quizz pour s'entraîner. Bientôt disponible...</p>
+            <p>{{'home.kanjisDescription' | translate}}.</p>
         </div>
     </div>
 </div>

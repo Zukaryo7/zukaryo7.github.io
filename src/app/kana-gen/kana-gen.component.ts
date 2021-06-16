@@ -11,10 +11,11 @@ import { Kana } from 'src/_models/kana.model';
 })
 export class KanaGenComponent {
 
-  kana = "";
+  kana = " ";
   kanaType = "";
   romajiVisible = true;
   progression = 0;
+  progressString = "";
   first = true;
   isKatakanaChecked = true;
   isHiraganaChecked = true;
@@ -37,14 +38,14 @@ export class KanaGenComponent {
       this.chronometer.start();
       this.chronoStarted = true;
     } 
-    if(this.kana !== "Fini") {
+    if(this.kana !== "") {
       this.nextKana();
     }
   }
 
   nextKana() {
     if(this.isOver()) {
-      this.kana = "Fini";
+      this.kana = "";
       this.kanaType = "";
     } else {
       let avalaibleKanas = this.selectedKanas.filter(kana => kana.hiraganaUsed == false || kana.katakanaUsed == false);
@@ -64,20 +65,22 @@ export class KanaGenComponent {
   }
 
   swap(kanaType: string) {
-    if(!this.romajiVisible) {
-      this.kana = toRomaji(this.kana);
-      this.romajiVisible = true;
-    } else if(kanaType == "Hiragana") {
-      this.kana = toHiragana(this.kana);
-      this.romajiVisible = false;
-    } else {
-      this.kana = toKatakana(this.kana);
-      this.romajiVisible = false;
+    if(kanaType !== " ") {
+      if(!this.romajiVisible) {
+        this.kana = toRomaji(this.kana);
+        this.romajiVisible = true;
+      } else if(kanaType == "Hiragana") {
+        this.kana = toHiragana(this.kana);
+        this.romajiVisible = false;
+      } else {
+        this.kana = toKatakana(this.kana);
+        this.romajiVisible = false;
+      }
     }
   }
 
   reinitialize() {
-    this.kana = ""; this.kanaType = "";
+    this.kana = " "; this.kanaType = "";
     this.selectedKanas = [];
     this.addKanas(KANAS.baseKanas);
     this.progression = 0;
@@ -137,8 +140,13 @@ export class KanaGenComponent {
       if(kana.hiraganaUsed && hiraChecked) counter++;
       if(kana.katakanaUsed && kataChecked) counter++;
     })
-    if(hiraChecked && kataChecked) this.progression = (counter/(this.selectedKanas.length*2))*100;
+
+    let allSelected = false;
+    
+    if(hiraChecked && kataChecked) { this.progression = (counter/(this.selectedKanas.length*2))*100; allSelected = true; }
     else if(hiraChecked || kataChecked) this.progression = (counter/(this.selectedKanas.length))*100;
+
+    this.progressString = counter + "/" + (allSelected ? this.selectedKanas.length*2 : this.selectedKanas.length);
   }
 
   private resetCheckboxes() {

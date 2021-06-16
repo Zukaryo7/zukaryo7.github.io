@@ -14,7 +14,6 @@
                 text-align: left;
                 animation: rightTranslation 0.7s linear, nihongoFadein 1s ease-in;
                 animation-fill-mode: forwards;
-                margin-bottom: 4%;
             }
             .headline {
                 font-size: 40px;
@@ -26,7 +25,7 @@
                 .evidence {
                     color: var(--color-accent);
                 }
-                margin-bottom: 8%;
+                margin-bottom: 30px;
             }
             button {
                 width: fit-content;
@@ -38,6 +37,10 @@
                 &:hover {
                     background-color: var(--color-accent-hover);
                     border: var(--color-accent-hover);
+                }
+                .fa-search {
+                    color: var(--color-primary);
+                    margin-left: 10px;
                 }
             }   
         }   

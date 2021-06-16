@@ -38,21 +38,21 @@
 
 .dropdown-item:hover {
 	background-color: var(--color-primary);
+	cursor: pointer;
 }
 
 .logo {
-
 	text-decoration: none;
 	color: var(--font-color);
 	font-family: 'Righteous', cursive;
 	font-weight: 300;
 	font-size: 32px;
-	.logoDot {
-		width: 15px;
-		height: 15px;
-		border-radius: 50%;
-		background-color: var(--color-accent);
-	}
+}
+
+.beta {
+	margin: 0 0 0 10px;
+	color: var(--color-accent);
+	text-decoration: overline ;
 }
 
 .dropdown-menu {
@@ -130,4 +130,3 @@
   .footer a:hover {
 	color: var(--color-accent);
   }
-

@@ -1,0 +1,32 @@
+{
+	"about": {
+		"description": "Motivated by the idea of learning the language of the land of the rising sun, I created a small web page with the sole objective of generating random Romajis. This way, I could practice rewriting the Romaji displayed in Hiragana & Katakana. Why ? To not always write them in traditional order (a, i, u, e, o) and thus, be sure to really know them.<br/><br/>When the web page was finished, my friends told me it would be nice if we could see the answer (convert the romaji into kana), have a progress bar, choose only Hiraganas or Katakanas and many other things.<br/><br/>I follow these advices and gradually improved the generation module, thinking that it would keep me busy. Contemplating my cute little generation module, a thought came to my mind: finally, why not make a beautiful website and adding some modules, entirely dedicated to learning Japanese ?",
+		"subtitle": "Information about Zukagen",
+		"title": "ABOUT"
+	},
+	"gen": {
+		"diacritics": "Diacritics",
+		"digraphs": "Digraphs",
+		"explaination": "Generate the 46 basic Japanese signs in \"Rōmaji\" in random order. Each sign will only appear once until the list is reset.<br/>The goal is to practice writing the Katakana or Hiragana of corresponding Rōmaji. Random generation avoids rote learning (a, i, u ,e, o, ...)<br/>Click on the Rōmaji to show the solution!",
+		"generate": "Generate",
+		"reinitialize": "Reset list",
+		"time": "Time:"
+	},
+	"home": {
+		"discover": "Discover",
+		"genDescription": "Module randomly generating the 46 basic Japanese signs. For each \"Romaji\", the objective is to write its Katakana / Hiragana version.",
+		"kanjisDescription": "Module presenting \"Kanjis\" and their meaning as well as Quizzes to practice. Available soon...",
+		"readDescription": "Module presenting randomly generated Japanese words that must be rewritten in \"Romaji\". Available soon...",
+		"title": "An <span class='evidence'>elegant</span> solution<br/>to learn Japanese"
+	},
+	"nav": {
+		"about": "About",
+		"credit": "Created by Zukaryo",
+		"generator": "Generator",
+		"home": "Home",
+		"language": "Language",
+		"license": "All rights reserved © 2021",
+		"logs": "Logs",
+		"read": "Read"
+	}
+}

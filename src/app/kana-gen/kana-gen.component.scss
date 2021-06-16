@@ -6,6 +6,7 @@ h1 {
 
 .title {
   color: var(--color-accent);
+  animation: fadein 1s ease-in;
 }
 
 .kanaKanji {
@@ -91,6 +92,18 @@ button {
 
 .progress {
   background-color: var(--color-primary);
+  .progress-bar {
+      color: var(--color-primary) !important;
+  }
+}
+
+@keyframes fadein {
+  from { 
+    opacity: 0; 
+  }
+  to   { 
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -110,6 +123,7 @@ button {
     .description {
         width: 75%;
     }
+    
 }
 
 @media (max-width: 875px) {

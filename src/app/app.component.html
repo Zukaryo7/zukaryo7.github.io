@@ -1,18 +1,23 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <a class="logo d-flex align-items-center" routerLink="">ZUKAGEN<div class="logoDot m-lg-2"></div></a>
+    <div class="d-flex align-items-baseline">
+      <a class="logo" routerLink="">ZUKA<span style="color: var(--color-accent);">G</span>EN</a>
+      <p class="beta">Bêta</p>
+    </div>
+
     <button id="smallNav" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" routerLink="/home" routerLinkActive="activeNavItem">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" routerLink="/kana-gen" routerLinkActive="activeNavItem">Générateur</a></li>
-        <li class="nav-item"><a class="nav-link" >Lecture</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/home" routerLinkActive="activeNavItem">{{ 'nav.home' | translate }}</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/kana-gen" routerLinkActive="activeNavItem">{{ 'nav.generator' | translate }}</a></li>
+        <li class="nav-item"><a class="nav-link" >{{ 'nav.read' | translate }}</a></li>
         <li class="nav-item"><a class="nav-link" >Kanjis</a></li>
-        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fr</a>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ 'nav.language' | translate }}</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item">En</a></li>
+            <li><a (click)="switchLang('en')" class="dropdown-item">English</a></li>
+            <li><a (click)="switchLang('fr')" class="dropdown-item">Français</a></li>
           </ul>
         </li>
         <li class="nav-item toggle-item">
@@ -34,9 +39,9 @@
 
 <div class="footer d-flex flex-column align-items-center h-100">
   <div class="d-flex justify-content-center">
-    <a href="https://twitter.com/Zukaryo7" target="_blank" rel="noopener noreferrer" class="footerLink">App créée par @zukaryo</a>
-    <a routerLink="/logs">Logs</a>
-    <a routerLink="/about">À Propos</a>
+    <a href="https://twitter.com/Zukaryo7" target="_blank" rel="noopener noreferrer" class="footerLink">{{ 'nav.credit' | translate }}</a>
+    <a routerLink="/logs">{{ 'nav.logs' | translate }}</a>
+    <a routerLink="/about">{{ 'nav.about' | translate }}</a>
   </div>
-  <p>Tous droits réservés © 2021</p>
+  <p>{{ 'nav.license' | translate }}</p>
 </div>
