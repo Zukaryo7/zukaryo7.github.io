@@ -1,5 +1,4 @@
 function setTheme(themeName) {
-    console.trace();
     localStorage.setItem('theme', themeName);
     let element = document.getElementById("smallNav");
     if(themeName === "theme-light") element.classList.add("darkSmallNav");
