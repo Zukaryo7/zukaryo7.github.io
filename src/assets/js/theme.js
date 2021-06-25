@@ -13,12 +13,12 @@ function toggleTheme() {
 }
 
 (function () {
-    if (localStorage.getItem('theme') === 'theme-dark') setTheme('theme-dark');
-    else setTheme('theme-light');
+    if (localStorage.getItem('theme') === 'theme-light') setTheme('theme-light');
+    else setTheme('theme-dark');
 })();
 
 const togl = document.getElementById('switch');
 
 togl.addEventListener('change', () => {
-  toggleTheme();
+    toggleTheme();
 });
