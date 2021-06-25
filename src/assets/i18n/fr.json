@@ -9,7 +9,7 @@
 		"digraphs": "Digraphes",
 		"explaination": "Génère les 46 signes japonais de base en \"Rōmaji\" dans un ordre aléatoire. Chaque signe n'apparaîtra qu'une fois jusqu'à réinitialisation de la liste.<br/>Le but est de s'entraîner à écrire le Katakana ou Hiragana du Rōmaji correspondant. La génération aléatoire permet d'éviter le par cœur (a, i, u, e, o, ...)<br/>Cliquez sur le \"Rōmaji\" pour afficher la solution !",
 		"generate": "Générer",
-		"reinitialize": "Réinitialiser liste",
+		"reinitialize": "Réinitialiser",
 		"time": "Temps :"
 	},
 	"home": {

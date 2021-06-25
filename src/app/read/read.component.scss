@@ -1,0 +1,122 @@
+.title {
+    margin: 15px;
+    font-weight: 200;
+    letter-spacing: 8px;
+    color: var(--color-accent);
+    animation: fadein 1s ease-in;
+}
+
+.chrono {
+    margin: 15px;
+    .time {
+        color: var(--color-accent);
+    }
+}
+
+.words-table {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    background-color: var(--color-primary);
+    padding: 20px;
+    border-radius: 10px;
+    .word-global {
+        margin: 0 15px 0 15px;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 8px;
+    }
+    .word-current {
+        color: var(--color-accent);
+        background-color: var(--color-secondary);
+    }
+    .word-found {
+        color: var(--color-primary);
+        background-color: var(--color-accent);
+    }
+    
+    .word-fail {
+        color: var(--color-primary);
+        background-color: rgb(250, 82, 82);
+    }
+}
+
+.sub-table {
+    text-align: left;
+    width: 80%;
+    margin: 10px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .fa-redo {
+        cursor: pointer;
+        margin-right: 25px;
+        color: var(--color-accent);
+    }
+    .form-check {
+        margin-right: 2px !important;
+    }
+    .stats {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        p {
+            margin: 0 15px 0 0;
+            .counter {
+                color: var(--color-accent);
+                font-weight: bold;
+            }
+        }
+    }
+    .options {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+.answer {
+    text-align: left;
+    width: 80%;
+    margin: 25px auto 25px auto;
+    .answerInput {
+        color: var(--font-color);
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border: 1px solid var(--color-accent);
+        }
+    }
+    #answerId {
+        background-color: var(--color-accent);
+        color: var(--color-primary);
+        border: none;
+    }
+    .pause {
+        border: none;
+        background-color: var(--color-primary);
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        &:hover {
+            outline: 1px solid var(--color-accent);
+        }
+    }
+
+    .fa-pause, .fa-play {
+        color: var(--color-accent);
+    }
+}
+
+@keyframes fadein {
+    from { 
+      opacity: 0; 
+    }
+    to   { 
+      opacity: 1;
+    }
+  }

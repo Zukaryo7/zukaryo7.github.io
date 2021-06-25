@@ -47,6 +47,7 @@ export class KanaGenComponent {
     if(this.isOver()) {
       this.kana = "";
       this.kanaType = "";
+      this.chronometer.pause();
     } else {
       let avalaibleKanas = this.selectedKanas.filter(kana => kana.hiraganaUsed == false || kana.katakanaUsed == false);
       let kana = avalaibleKanas[Math.floor(Math.random() * avalaibleKanas.length)];

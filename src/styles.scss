@@ -6,6 +6,7 @@
     --color-accent-inverted: invert(55%) sepia(100%) saturate(5795%) hue-rotate(207deg) brightness(98%) contrast(104%);
     --color-accent-hover: #095cd8;
     --bg-motif: #00000012;
+    --nav-hover-color: rgb(0, 0, 0);
     height: 100%;
     background: linear-gradient(to top,  #f1f1f1,  #f1f1f1);
 }
@@ -18,6 +19,7 @@
     --color-accent-inverted: invert(78%) sepia(19%) saturate(819%) hue-rotate(344deg) brightness(101%) contrast(101%);
     --color-accent-hover: rgb(223, 164, 101);
     --bg-motif: #FFFFFF09;
+    --nav-hover-color: rgb(197, 197, 197);
     height: 100%;
     background: linear-gradient(to top, var(--color-primary), var(--color-primary));
 

@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ReadComponent } from './read/read.component';
 
 @NgModule({
   declarations: [	
@@ -21,7 +22,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     KanaGenComponent, 
     HomeComponent, 
     NotFoundComponent, 
-    AboutComponent,
+    AboutComponent, 
+    ReadComponent,
 
    ],
   imports: [

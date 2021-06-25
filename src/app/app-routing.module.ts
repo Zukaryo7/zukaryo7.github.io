@@ -1,3 +1,4 @@
+import { ReadComponent } from './read/read.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { KanaGenComponent } from './kana-gen/kana-gen.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent},
   { path: 'kana-gen', component: KanaGenComponent },
+  { path: 'read', component: ReadComponent },
   { path: 'logs', component: LogsComponent },
   { path: 'about', component: AboutComponent},
 
