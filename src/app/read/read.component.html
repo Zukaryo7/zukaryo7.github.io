@@ -1,5 +1,5 @@
-<h1 class="title">Module de lecture</h1>
-<p>Écrivez en Romaji les kanas visibles ci-dessous.</p>
+<h1 class="title">{{'read.title' | translate}}</h1>
+<p>{{'read.description' | translate}}</p>
 <div class="chrono">{{'gen.time' | translate}} <b class="time" [chronometer]="chronometer"></b></div>
 
 <div class="words-table">
@@ -8,22 +8,14 @@
 
 <div class="sub-table">
     <div class="stats">
-        <p>Trouvés : <span class="counter">{{foundCounter}}</span></p> 
-        <p>Fautes : <span class="counter">{{failCounter}}</span></p>    
-    </div>
-    <div class="options">
-        <div (click)="regen()"><i class="fas fa-redo"></i></div>
-        <div class="form-check">
-            <input [checked]="isRegenAuto" (change)="regenAuto()" class="form-check-input" type="checkbox" id="auto">
-            <label class="form-check-label" for="auto">Auto</label>
-        </div>
+        <p>{{'read.founds' | translate}} : <span class="counter">{{totalWordsFound}}</span></p> 
+        <p>{{'read.mistakes' | translate}} : <span class="counter">{{totalWordsFail}}</span></p>    
     </div>
 </div>
 
 <div class="input-group answer">
-    <span class="input-group-text" id="answerId">Romajis</span>
-    <input (keyup)="onKeydown($event)" type="text" class="form-control answerInput" aria-label="Sizing example input" aria-describedby="answerId">
-    <button (click)="pause()" class="btn btn-outline-secondary pause" type="button"><i class="fas fa-pause" id="pause"></i></button>
+    <span class="input-group-text" id="answerId">Romaji</span>
+    <input (click)="startChrono()" (keyup)="onKeyUp($event)" type="text" class="form-control answerInput" aria-label="Sizing example input" aria-describedby="answerId">
+    <button (click)="pauseChrono()" class="btn btn-outline-secondary pause" type="button"><i class="fas fa-play" id="pause"></i></button>
 </div>
-
 

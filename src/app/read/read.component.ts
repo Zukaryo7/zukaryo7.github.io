@@ -1,112 +1,104 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { toHiragana, toKatakana, toRomaji } from 'wanakana';
+import { Component } from '@angular/core';
+import { toRomaji } from 'wanakana';
 import { Chronometer } from 'ngx-chronometer';
-import { HttpClient } from '@angular/common/http';
+import { addClass, replaceClass, removeClass } from 'src/environments/dom';
 
 @Component({
   selector: 'app-read',
   templateUrl: './read.component.html',
   styleUrls: ['./read.component.scss']
 })
-export class ReadComponent implements OnInit {
+export class ReadComponent {
 
-  selectedWords = ["まし", "この", "という", "その", "この", "という", "その", "この", "という", "その", "この", "という", "その", "この", "という", "その", "この", "という", "その"];
+  selectedWords : string[] = [];
   wordFoundIndex = 0;
-  isRegenAuto = false;
-  isPaused = true;
+  totalWordsFound = 0;
+  totalWordsFail = 0;
   chronometer: Chronometer = new Chronometer();
   chronoStarted = false;
-  foundCounter = 0;
-  failCounter = 0;
+  chronoPaused = true;
 
-  constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {}
-
-  ngAfterViewInit(): void {
-    this.addClass("word-current", "word-" + (this.wordFoundIndex + 1));
-    //this.readFile();
-  }
-
-  regen() {
-    this.selectedWords = [];
+  constructor() {
     this.generateNewTab();
   }
 
-  regenAuto() {
-    this.isRegenAuto = !this.isRegenAuto;
+  ngAfterViewInit(): void {
+    this.prepareNextWord();
   }
 
-  onKeydown(changement: any) {
-    let inputStr = changement.target.value;
-    this.checkChrono();
-
-    if(inputStr.trim().toLocaleLowerCase() === toRomaji(this.selectedWords[this.wordFoundIndex])) {
-      this.addClass("word-found", "word-" + (this.wordFoundIndex + 1));
-      this.foundCounter++;
-      this.prepareNextWord(changement);
-    } else if(inputStr.trim().length !== 0 && inputStr.slice(inputStr.length - 1) === " ") {
-      this.addClass("word-fail", "word-" + (this.wordFoundIndex + 1));
-      this.failCounter++;
-      this.prepareNextWord(changement);
+  onKeyUp(changement: any) {
+    let inputStr = changement.target.value.trim().toLocaleLowerCase();
+    let toFound = toRomaji(this.selectedWords[this.wordFoundIndex]);
+    if(inputStr === "" || inputStr.length > toFound.length)
+      this.resetInput(changement);
+    else if(inputStr.length === toFound.length) {
+        inputStr === toFound ? this.updateWordStatus("word-found") : this.updateWordStatus("word-fail");
+        this.resetInput(changement);
+        this.wordFoundIndex++;
+        if(this.wordFoundIndex === this.selectedWords.length) {
+          this.resetCss();
+          this.wordFoundIndex = 0;
+          this.generateNewTab();
+        }
+        this.prepareNextWord();
     }
   }
 
-  pause() {
-    this.isPaused = !this.isPaused;
-    if(this.isPaused) {
+  updateWordStatus(status : string) {
+    addClass(status, "word-" + (this.wordFoundIndex + 1));
+    status === "word-found" ? this.totalWordsFound++ : this.totalWordsFail++;
+    removeClass("word-"+ (this.wordFoundIndex + 1), "word-current");
+  }
+
+  prepareNextWord() {
+    addClass("word-current", "word-" + (this.wordFoundIndex + 1)); 
+  }
+
+  resetInput(inputValue : any) {
+    inputValue.target.value = "";
+  }
+
+
+
+
+  
+  // Vider puis remplir le tableau selectedWords avec des mots randoms du fichier "../../assets/res/jap.txt"
+  // Les mots ne doivent pas contenir de kanji (remplacés par des hiragana ou katakana correspondants ou furigana)
+  // Soit changer le txt et remplacer tous les kanjis soit utiliser un truc et le faire ici à la volée.
+  // La méthode est appelée automatiquement au chargement de la page ou lorsque le tableau est complété par l'utilisateur
+  generateNewTab() {
+    this.selectedWords = ["という", "という", "という", "という", "という", "という", "という"];
+  }
+
+
+
+
+
+  resetCss() {
+    for(let i = 1; i <= this.wordFoundIndex; i++) {
+      removeClass("word-"+ i, "word-found");
+      removeClass("word-"+ i, "word-fail");
+    }
+  }
+
+  startChrono() {
+    if(!this.chronoStarted) {
       this.chronometer.start();
-      this.replaceClass("pause", "fa-play", "fa-pause");
+      this.chronoStarted = true;
+      this.chronoPaused = false;
+      replaceClass("pause", "fa-play", "fa-pause");
+    }
+  }
+
+  pauseChrono() {
+    this.chronoPaused = !this.chronoPaused;
+    if(!this.chronoPaused) {
+      this.chronometer.start();
+      replaceClass("pause", "fa-play", "fa-pause");
     } else {
       this.chronometer.pause();
-      this.replaceClass("pause", "fa-pause", "fa-play");
+      replaceClass("pause", "fa-pause", "fa-play");
     }
   }
-
-  private addClass(className: string, elementName: string) {
-    let element = document.getElementById(elementName);
-    element?.classList.add(className);
-  }
-
-  private replaceClass(id: string, oldClass: string, newClass: string) {
-    let element = document.getElementById(id);
-    element?.classList.replace(oldClass, newClass);
-
-  }
-
-  private prepareNextWord(inputValue : any) {
-    this.wordFoundIndex++;
-    inputValue.target.value = "";
-    this.addClass("word-current", "word-" + (this.wordFoundIndex + 1));
-  }
-
-  private checkChrono() {
-    if(!this.chronoStarted) {
-      this.chronometer.start(); 
-      this.chronoStarted = true;
-    }
-  }
-
-
-  // Vider puis remplir le tableau selectedWords avec des mots randoms du fichier "../../assets/res/jap.txt"
-  // Les mots ne doivent pas contenir de kanji (soit replacé par les hiragana ou katakana correspondants 
-  // ou alors en mode Furigana
-  // Donc soit faut changer le txt et remplacer tous les kanjis soit utiliser un truc et le faire ici à la volée.
-
-  // Méthode à utiliser lors d'un click depuis la méthode regen
-  private generateNewTab() {
-    this.selectedWords = [];
-    
-  }
-
-
-  /*
-  private readFile() {
-    let array : string[] = [];
-    this.http.get("../../assets/res/jap.txt", {responseType: 'text'})
-        .subscribe(data => { console.log(data) });
-
-  }
-  */
 
 }

@@ -111,8 +111,8 @@
 }
 
   .footer {
-	margin-top: 25px;
-	margin-bottom: 10px;
+	width: 95%;
+	margin: 20px auto 20px auto;
 	font-weight: 300;
 
 
@@ -121,22 +121,20 @@
 		font-family: 'Righteous', cursive;
 		font-weight: 300;
 		cursor: pointer;
-		margin-bottom: 8px;
+		margin: 0 !important;
 	}
 
 	.footerLink {
 		font-weight: 400;
-		margin-right: 20px;
-		margin-bottom: 8px;
 	}
 
 	.footerLink, .license {
 		text-decoration: none;
 		color: var(--font-color);
+		margin: 0 0 0 20px;
 	}
 
 	.license {
-		margin-bottom: 10px;
 		font-weight: 200;
 	}
   }

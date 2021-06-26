@@ -28,5 +28,11 @@
 		"license": "All rights reserved © 2021",
 		"logs": "Logs",
 		"read": "Read"
+	},
+	"read": {
+		"title": "Reading Kanas",
+		"description": "Write the following Kanas in Romaji.",
+		"founds": "Founds",
+		"mistakes": "Mistakes"
 	}
 }

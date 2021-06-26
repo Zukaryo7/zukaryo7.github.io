@@ -28,5 +28,11 @@
 		"license": "Tous droits réservés © 2021",
 		"logs": "Journal",
 		"read": "Lecture"
+	},
+	"read": {
+		"title": "Lecture de Kanas",
+		"description": "Ecrivez en Romaji les kanas visibles ci-dessous.",
+		"founds": "Trouvés",
+		"mistakes": "Fautes"
 	}
 }
