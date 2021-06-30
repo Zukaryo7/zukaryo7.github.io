@@ -8,6 +8,7 @@
             margin-right: 8%;
             .nihongo {
                 letter-spacing: 25px;
+                margin-right: -25px;
                 font-weight: bold;
                 font-size: 25px;
                 color: var(--font-color);
@@ -16,7 +17,7 @@
                 animation-fill-mode: forwards;
             }
             .headline {
-                font-size: 40px;
+                font-size: 2.5em;
                 font-weight: bolder;
                 text-align: left;
                 animation: rightTranslation 0.7s linear, fadein 1s ease-in;
@@ -28,24 +29,29 @@
                 margin-bottom: 30px;
             }
             button {
-                width: fit-content;
                 animation: leftTranslation 0.7s linear, fadein 1s ease-in;
                 animation-fill-mode: forwards;  
+                color: var(--color-secondary);
+                border: none !important;
+                outline: none !important;
+                width: max-content;
                 background-color: var(--color-accent);
-                border: var(--color-accent);
-                color: var(--color-primary);
                 &:hover {
                     background-color: var(--color-accent-hover);
-                    border: var(--color-accent-hover);
+                }
+                &:focus, &:active {
+                    outline: none;
+                    box-shadow: none;
                 }
                 .fa-search {
-                    color: var(--color-primary);
                     margin-left: 10px;
+                    color: var(--color-secondary);
                 }
-            }   
-        }   
+            }
+
+    }
         .mainIllu {
-            width: 45%;
+            width: 50%;
             animation: topTranslation 0.7s linear, fadein 1s ease-in;
         }
     }
@@ -59,8 +65,8 @@
             border-radius: 10px;
             width: 30%;
             &:hover {
-                transform: scale(1.05);
-                transition: 0.2s ease-in;
+                transform: scale(1.03);
+                transition: 0.1s ease-in;
                 cursor: pointer;
             }
             img {
@@ -81,7 +87,7 @@
 
 @keyframes rightTranslation {
     0% {
-        transform: translateX(-7%);
+        transform: translateX(-5%);
     }
     100% {
         transform: translateX(0);
@@ -100,7 +106,7 @@
 
 @keyframes topTranslation {
     0% {
-        transform: translateY(8%);
+        transform: translateY(6%);
     }
     100% {
         transform: translateY(0);
@@ -109,7 +115,7 @@
 
 @keyframes leftTranslation {
     0% {
-        transform: translateX(50%);
+        transform: translateX(30%);
     }
     100% {
         transform: translateX(0);
@@ -121,7 +127,7 @@
         margin-right: 2%;
     }
     .mainIllu {
-        width: 55% !important;
+        width: 60% !important;
     }
 }
 
@@ -137,7 +143,7 @@
     .mainIllu {
         margin-top: 30px !important;
         margin-bottom: 0px !important;
-        width: 80% !important;
+        width: 65% !important;
     }
     .main-cards {
         margin: 50px auto 30px auto !important;
@@ -147,7 +153,7 @@
 
 @media (max-width: 1000px) {
     .mainIllu {
-        display: none;
+        width: 80% !important;
     }
     .main-cards {
         flex-direction: column;
@@ -159,18 +165,33 @@
         width: 100% !important;
         margin: 20px;
     }
+    .left-panel {
+        align-items: center;
+        align-self: center;
+        p {
+            text-align: center !important;
+        }
+    }
+    .headline {
+        font-size: 2.2em !important;
+    }
 }
 
 @media (max-width: 700px) {
+    .mainIllu {
+        width: 90% !important;
+    }
     .wrapper {
         margin: auto !important;
     }
     .left-panel {
         align-items: center;
-        margin: auto;
         p {
             text-align: center !important;
         }
+    }
+    .headline {
+        font-size: 2em !important;
     }
     .all {
         width: 95%;

@@ -1,5 +1,5 @@
 .theme-light {
-    --color-primary: #f7f7f7;
+    --color-primary: #f1f1f1;
     --color-secondary: white;
     --font-color: rgb(58, 57, 57);
     --color-accent: #0d6efd;
@@ -22,7 +22,6 @@
     --nav-hover-color: rgb(197, 197, 197);
     height: 100%;
     background: linear-gradient(to top, var(--color-primary), var(--color-primary));
-
 }
 
 html, body {
@@ -34,4 +33,10 @@ html, body {
         color: var(--font-color);
     }
     margin: 0 10px 0 10px;
+}
+
+@media (max-width: 500px) {
+	html, body {
+        margin: 2px !important;
+    }
 }

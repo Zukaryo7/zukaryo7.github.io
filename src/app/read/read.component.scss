@@ -3,7 +3,6 @@
     font-weight: 200;
     letter-spacing: 8px;
     color: var(--color-accent);
-    animation: fadein 1s ease-in;
 }
 
 .chrono {
@@ -16,6 +15,7 @@
 .words-table {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 80%;
     margin: auto;
     background-color: var(--color-primary);
@@ -112,11 +112,8 @@
     }
 }
 
-@keyframes fadein {
-    from { 
-      opacity: 0; 
+@media (max-width: 850px) {
+    .words-table, .sub-table, .answer {
+        width: 100% !important;
     }
-    to   { 
-      opacity: 1;
-    }
-  }
+}

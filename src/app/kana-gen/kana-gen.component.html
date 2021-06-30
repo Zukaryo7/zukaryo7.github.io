@@ -1,7 +1,7 @@
 <div class="main d-flex flex-column justify-content-center align-items-center">
   <h1 class="kanaKanji">仮名</h1>
   <h1 class="title">RANDOM ROMAJI GENERATOR</h1>
-  <div class="time">{{'gen.time' | translate}} <b [chronometer]="chronometer"></b></div>
+  <div class="chrono">{{'gen.time' | translate}} <b class="time" [chronometer]="chronometer"></b></div>
   <p class="description" [innerHTML]="'gen.explaination' | translate"></p>   
   <div class="checkboxes d-flex justify-content-between">
     <div class="form-check">
@@ -31,7 +31,7 @@
     <div [style.width.%]="progression" class="progress-bar bg-info" role="progressbar">{{progressString}}</div>
   </div>
   <div class="buttons">
-    <button (click)="generateKana()" type="button" class="btn btn-dark btn-lg">{{'gen.generate' | translate}}</button>
+    <button (click)="generateKana()" type="button" class="generate btn btn-outline-dark btn-lg">{{'gen.generate' | translate}}</button>
     <button (click)="reinitialize()" type="button" class="reinitialize btn btn-outline-dark btn-lg">{{'gen.reinitialize' | translate}}</button>
   </div>
 </div>

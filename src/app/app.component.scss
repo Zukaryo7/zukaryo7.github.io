@@ -49,7 +49,7 @@
 	color: var(--font-color);
 	font-family: 'Righteous', cursive;
 	font-weight: 300;
-	font-size: 32px;
+	font-size: 2em;
 }
 
 .beta {
@@ -87,7 +87,6 @@
 	background-color: var(--font-color);
 	border-radius: 50px;
 	cursor: pointer;
-	
 	position: relative;
 	height: 20px;
 	width: 40px;
@@ -142,3 +141,32 @@
   .footer a:hover {
 	color: var(--color-accent);
   }
+
+
+@media (max-width: 710px) {
+	.footer {
+		flex-direction: column !important;
+		.license {
+			margin: 0 0 10px 0 !important;
+			text-align: center;
+		}
+		.footerLink {
+			margin: 10px 25px 0 0 !important;
+		}
+	}
+
+}
+
+@media (max-width: 500px) {
+	.logo {
+		font-size: 1.7em;
+	}
+
+	.links {
+		flex-direction: column !important;
+		align-items: center;
+		.footerLink {
+			margin: 10px 0 !important;
+		}
+	}
+}
