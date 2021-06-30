@@ -23,7 +23,10 @@
     height: 100%;
     background: linear-gradient(to top, var(--color-primary), var(--color-primary));
 }
-
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
 html, body {
     user-select: none;
     font-family: 'Poppins', sans-serif;

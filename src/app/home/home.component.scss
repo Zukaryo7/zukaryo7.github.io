@@ -13,15 +13,11 @@
                 font-size: 25px;
                 color: var(--font-color);
                 text-align: left;
-                animation: rightTranslation 0.7s linear, nihongoFadein 1s ease-in;
-                animation-fill-mode: forwards;
             }
             .headline {
                 font-size: 2.5em;
                 font-weight: bolder;
                 text-align: left;
-                animation: rightTranslation 0.7s linear, fadein 1s ease-in;
-                animation-fill-mode: forwards;  
                 line-height: 120%;
                 .evidence {
                     color: var(--color-accent);
@@ -29,15 +25,15 @@
                 margin-bottom: 30px;
             }
             button {
-                animation: leftTranslation 0.7s linear, fadein 1s ease-in;
-                animation-fill-mode: forwards;  
                 color: var(--color-secondary);
                 border: none !important;
                 outline: none !important;
                 width: max-content;
                 background-color: var(--color-accent);
+                transition: 0.2s ease;
                 &:hover {
                     background-color: var(--color-accent-hover);
+                    transform: translateX(10px);
                 }
                 &:focus, &:active {
                     outline: none;
@@ -48,16 +44,13 @@
                     color: var(--color-secondary);
                 }
             }
-
     }
         .mainIllu {
             width: 50%;
-            animation: topTranslation 0.7s linear, fadein 1s ease-in;
         }
     }
 
     .main-cards {
-        animation: rightTranslation 0.7s linear, fadein 1s ease-in;
         margin: 100px 0 100px;
         .main-card {
             padding: 20px;
@@ -80,45 +73,6 @@
                 font-weight: 300;
             }
         }
-    }
-}
-
-
-
-@keyframes rightTranslation {
-    0% {
-        transform: translateX(-5%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@keyframes nihongoFadein {
-    from { opacity: 0; }
-    to   { opacity: 0.4; }
-}
-
-@keyframes topTranslation {
-    0% {
-        transform: translateY(6%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes leftTranslation {
-    0% {
-        transform: translateX(30%);
-    }
-    100% {
-        transform: translateX(0);
     }
 }
 
@@ -153,7 +107,7 @@
 
 @media (max-width: 1000px) {
     .mainIllu {
-        width: 80% !important;
+        display: none;
     }
     .main-cards {
         flex-direction: column;
@@ -178,9 +132,6 @@
 }
 
 @media (max-width: 700px) {
-    .mainIllu {
-        width: 90% !important;
-    }
     .wrapper {
         margin: auto !important;
     }

@@ -52,8 +52,9 @@ export class KanaGenComponent {
       let avalaibleKanas = this.selectedKanas.filter(kana => kana.hiraganaUsed == false || kana.katakanaUsed == false);
       let kana = avalaibleKanas[Math.floor(Math.random() * avalaibleKanas.length)];
       this.kana = kana.name;
+      
       let hiraganaNext = this.isKatakanaChecked ? Math.random() < 0.5 : true;
-      if(hiraganaNext && kana.hiraganaUsed == false) {
+      if((kana.hiraganaUsed == false && kana.katakanaUsed == false && hiraganaNext) || (kana.hiraganaUsed == false && kana.katakanaUsed == true)) {
         this.kanaType = "Hiragana";
         kana.hiraganaUsed = true;
       } else {
@@ -64,6 +65,8 @@ export class KanaGenComponent {
     this.updateProgress();
     this.romajiVisible = true;
   }
+
+  
 
   swap(kanaType: string) {
     if(kanaType !== " ") {

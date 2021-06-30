@@ -5,6 +5,7 @@
 		"title": "ABOUT"
 	},
 	"gen": {
+		"title": "ROMAJI GENERATOR",
 		"diacritics": "Diacritics",
 		"digraphs": "Digraphs",
 		"explaination": "Generate the 46 basic Japanese signs in \"Rōmaji\" in random order. Each sign will only appear once until the list is reset.<br/>The goal is to practice writing the Katakana or Hiragana of corresponding Rōmaji. Random generation avoids rote learning (a, i, u ,e, o, ...)<br/>Click on the Rōmaji to show the solution!",
