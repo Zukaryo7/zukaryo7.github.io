@@ -17,7 +17,7 @@
 		"discover": "Découvrir",
 		"genDescription": "Module générant de manière aléatoire les 46 signes Japonais de base. Pour chaque \"Romaji\", l'objectif est d'écrire sa version Katakana / Hiragana.",
 		"kanjisDescription": "Module présentant des \"Kanjis\" et leur signification ainsi que des Quizz pour s'entraîner. Bientôt disponible...",
-		"readDescription": "Module présentant des mots Japonais générés aléatoirement qu'il faudra réécrire en \"Romaji\". Bientôt disponible...",
+		"readDescription": "Module présentant des \"mots\" de quelques kanas générés aléatoirement à réécrire en \"Romaji\".",
 		"title": "Une solution <span class='evidence'>simple</span><br/>pour apprendre le Japonais"
 	},
 	"nav": {
@@ -34,6 +34,7 @@
 		"title": "Lecture de Kanas",
 		"description": "Ecrivez en Romaji les kanas visibles ci-dessous.",
 		"founds": "Trouvés",
-		"mistakes": "Fautes"
+		"mistakes": "Fautes",
+		"wpm":"Mots/min"
 	}
 }

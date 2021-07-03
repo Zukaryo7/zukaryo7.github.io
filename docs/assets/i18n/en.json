@@ -17,7 +17,7 @@
 		"discover": "Discover",
 		"genDescription": "Module randomly generating the 46 basic Japanese signs. For each \"Romaji\", the objective is to write its Katakana / Hiragana version.",
 		"kanjisDescription": "Module presenting \"Kanjis\" and their meaning as well as Quizzes to practice. Available soon...",
-		"readDescription": "Module presenting randomly generated Japanese words that must be rewritten in \"Romaji\". Available soon...",
+		"readDescription": "Module presenting randomly generated \"words\" of few kanas that must be rewritten in \"Romaji\".",
 		"title": "An <span class='evidence'>elegant</span> solution<br/>to learn Japanese"
 	},
 	"nav": {
@@ -34,6 +34,7 @@
 		"title": "Reading Kanas",
 		"description": "Write the following Kanas in Romaji.",
 		"founds": "Founds",
-		"mistakes": "Mistakes"
+		"mistakes": "Mistakes",
+		"wpm":"Words/min"
 	}
 }

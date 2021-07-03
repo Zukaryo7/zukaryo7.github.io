@@ -63,10 +63,6 @@
         align-items: center;
         p {
             margin: 0 15px 0 0;
-            .counter {
-                color: var(--color-accent);
-                font-weight: bold;
-            }
         }
     }
     .options {
@@ -74,6 +70,21 @@
         justify-content: flex-end;
         align-items: center;
     }
+}
+
+.counter {
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.firstCheckbox {
+    margin-right: 15px;
+}
+
+.words-minute {
+    width: 80%;
+    margin: 25px auto 25px auto;
+    text-align: left;
 }
 
 .answer {
@@ -113,7 +124,40 @@
 }
 
 @media (max-width: 850px) {
-    .words-table, .sub-table, .answer {
+    .words-table, .sub-table, .answer, .words-minute {
         width: 100% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .words-table, .sub-table, .answer, .words-minute {
+        width: 100% !important;
+    }
+
+    .sub-table {
+        display: flex;
+        flex-direction: column;
+        .stats {
+            margin-top: 15px;
+            flex-direction: column;
+            p {
+                margin-right: 0px;
+            }
+            margin-bottom: 15px;
+        }
+        .checkboxes {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+    }
+
+    .firstCheckbox {
+        margin-right: 0px !important;
+    }
+
+    .words-minute {
+        text-align: center;
+        margin: 0;
     }
 }
