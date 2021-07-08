@@ -22,10 +22,19 @@ export class ReadComponent {
   isKatakanaChecked = true;
   hiraganaDisabled = false;
   katakanaDisabled = false;
+  appreciation = "";
   wpm = 0;
   wpmInterval = setInterval(() => {
     if(this.chronometer !== undefined && this.chronometer.second > 0) {
       this.wpm = (this.totalWordsFound / this.chronometer.second) * 60;
+      if(this.wpm < 3) this.appreciation = "😴"; else
+      if(this.wpm < 6) this.appreciation = "🥱"; else
+      if(this.wpm < 8) this.appreciation = "😕"; else
+      if(this.wpm < 10) this.appreciation = "😐"; else 
+      if(this.wpm < 12) this.appreciation = "🙂"; else
+      if(this.wpm < 15) this.appreciation = "😄"; else
+      if(this.wpm < 20) this.appreciation = "😎"; else
+      this.appreciation = "🧠🧠🧠";
     }
   }, 1000);
 

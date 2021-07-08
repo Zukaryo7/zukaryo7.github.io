@@ -143,30 +143,23 @@
   }
 
 
-@media (max-width: 710px) {
+
+@media (max-width: 800px) {
+	.logo {
+		font-size: 1.7em;
+	}
 	.footer {
 		flex-direction: column !important;
 		.license {
 			margin: 0 0 10px 0 !important;
 			text-align: center;
 		}
-		.footerLink {
-			margin: 10px 25px 0 0 !important;
-		}
-	}
-
-}
-
-@media (max-width: 500px) {
-	.logo {
-		font-size: 1.7em;
-	}
-
-	.links {
-		flex-direction: column !important;
-		align-items: center;
-		.footerLink {
-			margin: 10px 0 !important;
+		.links {
+			flex-direction: column !important;
+			align-items: center;
+			.footerLink {
+				margin: 10px 0 !important;
+			}
 		}
 	}
 }

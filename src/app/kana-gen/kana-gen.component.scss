@@ -58,7 +58,7 @@ h1 {
 .kanaType {
   margin: 25px 0px 0px 0px;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 28px;
 }
 
 .bg-info {
@@ -107,93 +107,41 @@ button {
   }
 }
 
-@media (max-width: 1100px) {
 
-    .description {
-        text-align: justify;
-    }
 
-    .checkboxes {
-        width: 75%;
-    }
 
-    .title {
-        width: 75%;
-    }
+@media (max-width: 1200px) {
 
-    .description {
-        width: 75%;
-    }
-    
+  .checkboxes {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-width: 875px) {
-
-    .kanaKanji {
-        margin-bottom: 20px;
-    }
-
-    .title {
-        margin-bottom: 20px;
-    }
-
-    .time {
-        margin-bottom: 20px;
-    }
-
-    .description {
-        margin-bottom: 20px;
-    }
-
-    .checkboxes {
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .kanaType {
-        margin-top: 20px;
-    }
-
-    .kana {
-        margin-bottom: 40px;
-    }
-
-    .progress {
-        margin-bottom: 20px;
-    }
-    
-}
-
-@media (max-width: 650px) {
+  .title, .description, .checkboxes, .progress, .buttons {
+    width: 90% !important;
+  }
     
     .description {
         text-align: justify;
     }
 
   .progress {
-    width: 75% !important;
-    height: 20px;
+    height: 25px;
   }
 
   .buttons {
-    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
     button {
-      width: 100%;
+      width: 100% !important;
     }
 
   }
-}
 
-@media (max-width: 500px) {
-  .title, .description, .checkboxes, .progress, .buttons {
-    width: 90% !important;
-  }
 }

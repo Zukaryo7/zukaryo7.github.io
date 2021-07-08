@@ -123,13 +123,7 @@
     }
 }
 
-@media (max-width: 850px) {
-    .words-table, .sub-table, .answer, .words-minute {
-        width: 100% !important;
-    }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .words-table, .sub-table, .answer, .words-minute {
         width: 100% !important;
     }
