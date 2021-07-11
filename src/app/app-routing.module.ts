@@ -1,3 +1,4 @@
+import { KanjiQuizComponent } from './kanji-quiz/kanji-quiz.component';
 import { ReadComponent } from './read/read.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'kana-gen', component: KanaGenComponent },
   { path: 'read', component: ReadComponent },
+  { path: 'kanji-quiz', component: KanjiQuizComponent },
   { path: 'logs', component: LogsComponent },
   { path: 'about', component: AboutComponent},
 

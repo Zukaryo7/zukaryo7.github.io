@@ -20,7 +20,15 @@
         <div class="form-check">
           <input [checked]="isKatakanaChecked" (change)="updateKatakana()" class="form-check-input" type="checkbox"
             [disabled]="katakanaDisabled">
-          <label class="form-check-label" for="katakana">Katakana</label>
+          <label class="form-check-label firstCheckbox" for="katakana">Katakana</label>
+        </div>
+        <div class="form-check">
+          <input (change)="updateDigraphs($event)" class="form-check-input" type="checkbox">
+          <label class="form-check-label firstCheckbox" for="hiragana">{{ 'gen.digraphs' | translate }}</label>
+        </div>
+        <div class="form-check">
+          <input (change)="updateDiacritics($event)" class="form-check-input" type="checkbox">
+          <label class="form-check-label firstCheckbox" for="hiragana">{{ 'gen.diacritics' | translate }}</label>
         </div>
     </div>
 </div>

@@ -23,8 +23,6 @@ export class KanaGenComponent {
   katakanaDisabled = false;
   isDiacriticChecked = false;
   isDigraphChecked = false;
-  diactricDisabled = false;
-  digraphDisabled = false;
   chronometer: Chronometer = new Chronometer();
   chronoStarted = false;
 
@@ -160,8 +158,6 @@ export class KanaGenComponent {
     this.katakanaDisabled = false;
     this.isDiacriticChecked = false;
     this.isDigraphChecked = false;
-    this.diactricDisabled = false;
-    this.digraphDisabled = false;
   }
 
   private addKanas(kanas: string[]) {

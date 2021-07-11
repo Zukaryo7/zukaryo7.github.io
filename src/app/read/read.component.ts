@@ -12,6 +12,7 @@ import { KANAS } from 'src/environments/kanaData';
 export class ReadComponent {
 
   selectedWords : string[] = [];
+  availableKanas = KANAS.baseKanas;
   wordFoundIndex = 0;
   totalWordsFound = 0;
   totalWordsFail = 0;
@@ -29,10 +30,8 @@ export class ReadComponent {
       this.wpm = (this.totalWordsFound / this.chronometer.second) * 60;
       if(this.wpm < 3) this.appreciation = "😴"; else
       if(this.wpm < 6) this.appreciation = "🥱"; else
-      if(this.wpm < 8) this.appreciation = "😕"; else
       if(this.wpm < 10) this.appreciation = "😐"; else 
-      if(this.wpm < 12) this.appreciation = "🙂"; else
-      if(this.wpm < 15) this.appreciation = "😄"; else
+      if(this.wpm < 15) this.appreciation = "🙂"; else
       if(this.wpm < 20) this.appreciation = "😎"; else
       this.appreciation = "🧠🧠🧠";
     }
@@ -82,29 +81,28 @@ export class ReadComponent {
     inputValue.target.value = "";
   }
 
-  updateHiragana() {
-    this.isHiraganaChecked = !this.isHiraganaChecked
-    if(this.katakanaDisabled) this.katakanaDisabled = false; else this.katakanaDisabled = true;
-    this.resetTab();
-  }
-
-  updateKatakana() {
-    this.isKatakanaChecked = !this.isKatakanaChecked
-    if(this.hiraganaDisabled) this.hiraganaDisabled = false; else this.hiraganaDisabled = true;
-    this.resetTab();
-  }
-
   generateNewTab() {
     this.selectedWords = [];
     for(let i = 0; i < 20; i++) {
       let word = "";
       let syllableNbr = Math.floor(Math.random() * 3) + 2;
       for(let j = 0; j < syllableNbr; j++) {
-        let kanaIndex = Math.floor(Math.random() * 46);
-        word += KANAS.baseKanas[kanaIndex];
+        let kanaIndex = Math.floor(Math.random() * this.availableKanas.length);
+        word += this.availableKanas[kanaIndex];
       }
       word = this.convertWordToKana(word);
       this.selectedWords.push(word);
+    }
+  }
+
+  private addKanas(kanas: string[]) {
+    kanas.forEach(e => this.availableKanas.push(e));
+  }
+
+  private removeKanas(kanas: string[]) {
+    let index = this.availableKanas.indexOf(kanas[0]);
+    if(index !== -1) {
+        this.availableKanas.splice(index, kanas.length);
     }
   }
 
@@ -147,6 +145,30 @@ export class ReadComponent {
       this.chronometer.pause();
       replaceClass("pause", "fa-pause", "fa-play");
     }
+  }
+
+  updateHiragana() {
+    this.isHiraganaChecked = !this.isHiraganaChecked;
+    if(this.katakanaDisabled) this.katakanaDisabled = false; else this.katakanaDisabled = true;
+    this.resetTab();
+  }
+
+  updateKatakana() {
+    this.isKatakanaChecked = !this.isKatakanaChecked;
+    if(this.hiraganaDisabled) this.hiraganaDisabled = false; else this.hiraganaDisabled = true;
+    this.resetTab();
+  }
+
+  updateDigraphs(event: any) {
+    if(event.target.checked) this.addKanas(KANAS.digraphs);
+    else { this.removeKanas(KANAS.digraphs); }
+    this.resetTab();
+  }
+
+  updateDiacritics(event: any) {
+    if(event.target.checked) this.addKanas(KANAS.diacritics);
+    else { this.removeKanas(KANAS.diacritics); }
+    this.resetTab();
   }
 
 }
