@@ -1,3 +1,4 @@
+
 .title {
     color: var(--color-accent);    margin: 15px auto 15px auto;
     font-weight: 200;
@@ -29,6 +30,7 @@
         color: var(--font-color) !important;
         opacity: 0.6;
         margin-bottom: 8px;
+        text-align: left !important;
     }
     &:hover {
         background-color: #00000010;

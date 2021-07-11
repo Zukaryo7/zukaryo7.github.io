@@ -4,6 +4,10 @@
 		"subtitle": "Information about Zukagen",
 		"title": "ABOUT"
 	},
+	"tab": {
+		"title": "SYLLABARY",
+		"description": "Table showing the different Japanese Kanas. For each box, the Hiragana is on the left, the Katakana on the right and the Romaji at the bottom."	
+	},
 	"gen": {
 		"title": "ROMAJI GENERATOR",
 		"diacritics": "Diacritics",
@@ -22,6 +26,7 @@
 	},
 	"nav": {
 		"about": "About",
+		"tables": "Syllabary",
 		"credit": "Created by Zukaryo",
 		"generator": "Generator",
 		"home": "Home",

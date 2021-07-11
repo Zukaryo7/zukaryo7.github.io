@@ -1,3 +1,4 @@
+import { TablesComponent } from './tables/tables.component';
 import { ReadEasyComponent } from './read-easy/read-easy.component';
 import { KanjiQuizComponent } from './kanji-quiz/kanji-quiz.component';
 import { ReadComponent } from './read/read.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent},
+  { path: 'tables', component: TablesComponent },
   { path: 'kana-gen', component: KanaGenComponent },
   { path: 'read', component: ReadComponent },
   { path: 'read-easy', component: ReadEasyComponent},

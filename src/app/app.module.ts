@@ -16,6 +16,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReadComponent } from './read/read.component';
 import { KanjiQuizComponent } from './kanji-quiz/kanji-quiz.component';
 import { ReadEasyComponent } from './read-easy/read-easy.component';
+import { TablesComponent } from './tables/tables.component';
 
 @NgModule({
   declarations: [	
@@ -25,7 +26,7 @@ import { ReadEasyComponent } from './read-easy/read-easy.component';
     HomeComponent, 
     NotFoundComponent, 
     AboutComponent, 
-    ReadComponent, KanjiQuizComponent, ReadEasyComponent,
+    ReadComponent, KanjiQuizComponent, ReadEasyComponent, TablesComponent,
 
    ],
   imports: [
