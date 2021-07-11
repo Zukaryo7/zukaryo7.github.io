@@ -28,10 +28,13 @@
 		"language": "Language",
 		"license": "All rights reserved © 2021",
 		"logs": "Logs",
-		"read": "Read"
+		"read": "Read",
+		"readEasy": "Easy",
+		"readMedium": "Medium"
 	},
 	"read": {
-		"title": "Reading Kanas",
+		"title": "READING KANAS",
+		"titleEasy": "READING KANAS (EASY MODE)",
 		"description": "Write the following Kanas in Romaji.",
 		"founds": "Founds",
 		"mistakes": "Mistakes",

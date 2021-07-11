@@ -15,6 +15,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReadComponent } from './read/read.component';
 import { KanjiQuizComponent } from './kanji-quiz/kanji-quiz.component';
+import { ReadEasyComponent } from './read-easy/read-easy.component';
 
 @NgModule({
   declarations: [	
@@ -24,7 +25,7 @@ import { KanjiQuizComponent } from './kanji-quiz/kanji-quiz.component';
     HomeComponent, 
     NotFoundComponent, 
     AboutComponent, 
-    ReadComponent, KanjiQuizComponent,
+    ReadComponent, KanjiQuizComponent, ReadEasyComponent,
 
    ],
   imports: [

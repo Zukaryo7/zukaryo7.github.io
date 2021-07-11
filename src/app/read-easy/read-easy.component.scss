@@ -1,0 +1,91 @@
+h1 {
+    margin: 15px;
+    font-weight: 500;
+    letter-spacing: 5px;
+  }
+  
+  .title {
+    color: var(--color-accent);
+  }
+
+  .column-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+  }
+  .wrapper {
+      width: 45%;
+      margin-right: 15px;
+      .kana {
+        font-size: 6em;
+        font-weight: bolder;
+        padding: 30px;
+        background-color: var(--color-primary);
+        border-radius: 10px;
+      }
+      .answerInput {
+        color: var(--font-color);
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border: 1px solid var(--color-accent);
+        }
+      }
+      #answerId {
+        background-color: var(--color-accent);
+        color: var(--color-primary);
+        border: none;
+      }
+  }
+
+  .correct {
+    border: 2px solid var(--color-accent);
+  }
+
+  .incorrect {
+    border: 2px solid rgb(250, 82, 82);
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 30px;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    .founds {
+        margin-bottom: .125rem;
+    }
+    .mistakes {
+        margin-bottom: 10px;
+    }
+    .lastFailed {
+        margin-bottom: 10px;
+        font-size: 2em;
+        font-weight: bold;
+        color: rgb(250, 82, 82);
+    }
+    .counter {
+        color: var(--color-accent);
+    }
+  }
+
+@media (max-width: 1000px) {
+    .column-wrapper {
+        display: flex;
+        flex-direction: column;
+        .wrapper {
+            width: 100% !important;
+            .answer {
+                margin-bottom: 1rem;
+            }
+        }
+        .options {
+            align-items: center !important;
+        }
+    }
+}
+

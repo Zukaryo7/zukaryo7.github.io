@@ -28,10 +28,13 @@
 		"language": "Langue",
 		"license": "Tous droits réservés © 2021",
 		"logs": "Journal",
-		"read": "Lecture"
+		"read": "Lecture",
+		"readEasy": "Facile",
+		"readMedium": "Intermédiaire"
 	},
 	"read": {
-		"title": "Lecture de Kanas",
+		"title": "LECTURE DE KANAS",
+		"titleEasy": "LECTURE DE KANAS (SIMPLIFIÉE)",
 		"description": "Ecrivez en Romaji les kanas visibles ci-dessous.",
 		"founds": "Trouvés",
 		"mistakes": "Fautes",

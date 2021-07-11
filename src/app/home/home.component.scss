@@ -76,14 +76,22 @@
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1125px) {
+    .all {
+        width: 95%;
+    }
     .wrapper {
         flex-direction: column;
         margin-bottom: 0px !important;
     }
     .left-panel {
         margin-right: 0 !important;
-        align-self: flex-start;
+        align-self: center;
+        align-items: center;
+        .headline {
+            text-align: center !important;
+            font-size: 2.2em !important;
+        }
     }
     .mainIllu {
         display: none;

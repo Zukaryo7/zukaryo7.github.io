@@ -1,0 +1,43 @@
+<h3 class="kanaKanji">仮名</h3>
+<h1 class="title">{{'read.titleEasy' | translate}}</h1>
+<p>{{'read.description' | translate}}</p>
+
+<div class="column-wrapper">
+    <div class="wrapper">
+        <p class="kana" id="kana">{{ kanaToFound }}</p>
+    
+        <div class="input-group answer">
+            <span class="input-group-text" id="answerId">Romaji</span>
+            <input (keyup)="onKeyUp($event)" type="text" class="form-control answerInput" aria-label="Sizing example input" aria-describedby="answerId">
+        </div>
+    
+    </div>
+    
+    <div class="options">
+        <p class="lastFailed">{{lastFailed}}</p>
+        <p class="founds">{{'read.founds' | translate}} : <span class="counter">{{totalWordsFound}}</span></p> 
+        <p class="mistakes">{{'read.mistakes' | translate}} : <span class="counter">{{totalWordsFail}}</span></p>    
+        <div class="form-check">
+          <input [checked]="isHiraganaChecked" (change)="updateHiragana()" class="form-check-input" type="checkbox"
+            [disabled]="hiraganaDisabled">
+            <label class="form-check-label firstCheckbox" for="hiragana">Hiragana</label>
+        </div>
+        <div class="form-check">
+            <input [checked]="isKatakanaChecked" (change)="updateKatakana()" class="form-check-input" type="checkbox"
+            [disabled]="katakanaDisabled">
+            <label class="form-check-label firstCheckbox" for="katakana">Katakana</label>
+        </div>
+        <!--
+        <div class="form-check">
+            <input (change)="updateDigraphs($event)" class="form-check-input" type="checkbox">
+              <label class="form-check-label firstCheckbox" for="hiragana">{{'gen.digraphs' | translate}}</label>
+          </div>
+          <div class="form-check">
+              <input (change)="updateDiacritics($event)" class="form-check-input" type="checkbox">
+              <label class="form-check-label firstCheckbox" for="katakana">{{'gen.diacritics' | translate}}</label>
+          </div>
+          -->
+    </div>
+</div>
+
+
