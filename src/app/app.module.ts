@@ -17,6 +17,8 @@ import { ReadComponent } from './read/read.component';
 import { KanjiQuizComponent } from './kanji-quiz/kanji-quiz.component';
 import { ReadEasyComponent } from './read-easy/read-easy.component';
 import { TablesComponent } from './tables/tables.component';
+import { DakutenComponent } from './dakuten/dakuten.component';
+import { CombosComponent } from './combos/combos.component';
 
 @NgModule({
   declarations: [	
@@ -26,7 +28,7 @@ import { TablesComponent } from './tables/tables.component';
     HomeComponent, 
     NotFoundComponent, 
     AboutComponent, 
-    ReadComponent, KanjiQuizComponent, ReadEasyComponent, TablesComponent,
+    ReadComponent, KanjiQuizComponent, ReadEasyComponent, TablesComponent, DakutenComponent, CombosComponent,
 
    ],
   imports: [

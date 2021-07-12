@@ -1,3 +1,5 @@
+import { CombosComponent } from './combos/combos.component';
+import { DakutenComponent } from './dakuten/dakuten.component';
 import { TablesComponent } from './tables/tables.component';
 import { ReadEasyComponent } from './read-easy/read-easy.component';
 import { KanjiQuizComponent } from './kanji-quiz/kanji-quiz.component';
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   { path: 'home', component: HomeComponent},
-  { path: 'tables', component: TablesComponent },
+  { path: 'kanas', component: TablesComponent },
+  { path: 'dakuten', component: DakutenComponent },
+  { path: 'combos', component: CombosComponent },
   { path: 'kana-gen', component: KanaGenComponent },
   { path: 'read', component: ReadComponent },
   { path: 'read-easy', component: ReadEasyComponent},

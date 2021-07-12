@@ -8,6 +8,14 @@
 		"title": "SYLLABARY",
 		"description": "Table showing the different Japanese Kanas. For each box, the Hiragana is on the left, the Katakana on the right and the Romaji at the bottom.<br/>If the video is showing, click on the desired kana to see the stroke order."	
 	},
+	"dakuten": {
+		"title": "DAKUTEN",
+		"description": "Table showing the different Japanese dakuten. For each box, the Hiragana is on the left, the Katakana on the right and the Romaji at the bottom.<br/>"	
+	},
+	"combos": {
+		"title": "COMBOS",
+		"description": "Table showing the different Japanese combos. For each box, the Hiragana is on the left, the Katakana on the right and the Romaji at the bottom."	
+	},
 	"gen": {
 		"title": "ROMAJI GENERATOR",
 		"diacritics": "Diacritics",
@@ -26,7 +34,8 @@
 	},
 	"nav": {
 		"about": "About",
-		"tables": "Kanas",
+		"tables": "Alphabet",
+		"combos": "Combos",
 		"credit": "Created by Zukaryo",
 		"generator": "Writing",
 		"home": "Home",

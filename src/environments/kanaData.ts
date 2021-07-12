@@ -8,6 +8,7 @@ export const KANAS = {
                  "ba", "bi", "bu", "be", "bo", "pa", "pi", "pu", "pe", "po"],
 
     digraphs: ["kya", "kyu", "kyo", "gya", "gyu", "gyo", "sha", "shu", "sho", "jya", "jyu", "jyo", "cha", "chu", "cho",
-               "nya", "nyu", "nyo", "hya", "hyu", "hyo", "bya", "byu", "byo", "pya", "pyu", "pyo", "mya", "myu", "myo", "rya", "ryu", "ryo"]
+               "nya", "nyu", "nyo", "hya", "hyu", "hyo", "bya", "byu", "byo", "pya", "pyu", "pyo", "mya", "myu", "myo", "rya", "ryu", "ryo"],
+
 
 };

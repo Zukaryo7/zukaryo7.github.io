@@ -59,6 +59,7 @@ export class TablesComponent implements OnInit, OnDestroy {
     } else if(this.player !== undefined) {
       this.player.seekTo(YOUTUBE.hiraganaTimer[index]);
     }
+    this.showUp();
   }
 
   seekKatakanaYT(index: number) {
@@ -67,13 +68,14 @@ export class TablesComponent implements OnInit, OnDestroy {
     } else if(this.player !== undefined) {
       this.player.seekTo(YOUTUBE.katakanaTimer[index]);
     }
+    this.showUp();
   }
 
   startVideo() {
     this.reframed = false;
     this.player = new (window as any)['YT'].Player('player', {
-      width: '640',
-      height: '360',
+      width: '640px',
+      height: '360px',
       videoId: this.video,
       playerVars: {
         autoplay: 0,
@@ -112,6 +114,10 @@ export class TablesComponent implements OnInit, OnDestroy {
       case 101 || 150:
         break;
     }
+  }
+
+  private showUp(): void {
+    window.scroll(0,0);
   }
 
 }

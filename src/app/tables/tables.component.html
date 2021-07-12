@@ -2,8 +2,9 @@
 <h1 class="title">{{ 'tab.title' | translate }}</h1>
 <p class="description" [innerHTML]="'tab.description' | translate"></p>
 
-<div class="container"></div>
-<div id="player"></div>
+<div class="player-container">
+    <div id="player"></div>
+</div>
 
 <div class="kanas-table" >
     <div class="kanaCell" id="{{i+1}}" *ngFor="let kana of kanas; let i = index">
