@@ -37,7 +37,7 @@ export class TablesComponent implements OnInit, OnDestroy {
   /* 2. Initialize method for YT IFrame API */
   init() {
     var tag = document.createElement('script');
-    tag.src = 'http://www.youtube.com/iframe_api';
+    tag.src = '//www.youtube.com/iframe_api';
     var firstScriptTag = document.getElementsByTagName('script')[0];
     if(firstScriptTag.parentNode !== null) firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
