@@ -8,20 +8,30 @@ h1 {
     color: var(--color-accent);
 }
 
+.description {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
 .kanaKanji {
     margin-bottom: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
 }
 
 .kanas-table {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 15px 0 15px 0;
+    padding: 10px 0 10px 0;
     .kanaCell {
-        padding: 15px;
+        padding: 10px;
         background-color: var(--color-primary);
         border-radius: 10px;
-        margin: 10px;
+        margin: 5px;
         
         &:hover {
             outline: 2px solid var(--color-accent);
@@ -31,6 +41,9 @@ h1 {
             justify-content: space-around;
             font-size: 1.7em;
             font-weight: bold;
+            p {
+                margin-bottom: 0px !important;
+            }
         }
         .kanas::last-child {
             margin-right: 15px;
@@ -38,6 +51,16 @@ h1 {
         .romaji {
             font-size: 1.5em;
             opacity: 0.5;
+        }
+        .hiragana {
+            margin-right: 3px;
+        }
+        .hiragana, .katakana {
+            padding: 10px;
+            &:hover {
+                cursor: pointer;
+                color: var(--color-accent);
+            }
         }
     }
 }

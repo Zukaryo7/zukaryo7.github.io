@@ -1,13 +1,19 @@
 <h3 class="kanaKanji">仮名</h3>
 <h1 class="title">{{ 'tab.title' | translate }}</h1>
-<p>{{ 'tab.description' | translate }}</p>
+<p class="description" [innerHTML]="'tab.description' | translate"></p>
 
-<div class="kanas-table">
-    <div class="kanaCell" *ngFor="let kana of kanas; let i = index">
+<div class="container"></div>
+<div id="player"></div>
+
+<div class="kanas-table" >
+    <div class="kanaCell" id="{{i+1}}" *ngFor="let kana of kanas; let i = index">
         <div class="kanas">
-            <p style="margin-right: 30px;">{{ toHiragana(kana) }}</p>
-            <p>{{ toKatakana(kana) }}</p>
+            <p (click)="seekHiraganaYT(i)" class="hiragana">{{ toHiragana(kana) }}</p>
+            <p (click)="seekKatakanaYT(i)" class="katakana">{{ toKatakana(kana) }}</p>
         </div>
         <p class="romaji">{{kana}}</p>
     </div>
 </div>
+
+
+

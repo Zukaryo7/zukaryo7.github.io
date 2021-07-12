@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Survey } from 'survey-angular';
 
 @Component({
   selector: 'app-kanji-quiz',

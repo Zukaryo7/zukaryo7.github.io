@@ -6,7 +6,7 @@
 	},
 	"tab": {
 		"title": "SYLLABARY",
-		"description": "Table showing the different Japanese Kanas. For each box, the Hiragana is on the left, the Katakana on the right and the Romaji at the bottom."	
+		"description": "Table showing the different Japanese Kanas. For each box, the Hiragana is on the left, the Katakana on the right and the Romaji at the bottom.<br/>If the video is showing, click on the desired kana to see the stroke order."	
 	},
 	"gen": {
 		"title": "ROMAJI GENERATOR",
@@ -26,9 +26,9 @@
 	},
 	"nav": {
 		"about": "About",
-		"tables": "Syllabary",
+		"tables": "Kanas",
 		"credit": "Created by Zukaryo",
-		"generator": "Generator",
+		"generator": "Writing",
 		"home": "Home",
 		"language": "Language",
 		"license": "All rights reserved © 2021",

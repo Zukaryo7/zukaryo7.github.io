@@ -6,7 +6,7 @@
 	},
 	"tab": {
 		"title": "SYLLABAIRE",
-		"description": "Tableau reprenant les différents Kanas japonais. Pour chaque case, le Hiragana est à gauche, le Katakana à droite et le Romaji en bas."	
+		"description": "Tableau reprenant les différents Kanas japonais. Pour chaque case, le Hiragana est à gauche, le Katakana à droite et le Romaji en bas.<br/>Si la vidéo s'affiche correctement sur la page, cliquez sur le kana désiré pour voir l'ordre des traits."	
 	},
 	"gen": {
 		"title": "GENERATEUR DE ROMAJI",
@@ -26,9 +26,9 @@
 	},
 	"nav": {
 		"about": "À propos",
-		"tables": "Syllabaire",
+		"tables": "Kanas",
 		"credit": "Créé par Zukaryo",
-		"generator": "Générateur",
+		"generator": "Écriture",
 		"home": "Accueil",
 		"language": "Langue",
 		"license": "Tous droits réservés © 2021",
